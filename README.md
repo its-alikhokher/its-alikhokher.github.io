@@ -7,11 +7,15 @@ koi dependency nahi. Bas push karein aur GitHub Pages live kar dega.
 
 ```
 index.html              → "Hi" page (about + skills + contact)
-projects/index.html     → projects list + pagination
+projects/index.html     → projects list + pagination (cards pre-rendered)
 experience/index.html   → work history + education (CV se)
 assets/projects.js      → PROJECTS array — yahan projects edit karein
 assets/style.css        → styling + light/dark theme tokens
-assets/site.js          → theme toggle aur projects rendering
+assets/site.js          → theme toggle aur pagination
+assets/og.png           → social share image (1200x630)
+assets/avatar.png       → profile photo
+build.js                → projects ko HTML mein pre-render + sitemap banata hai
+sitemap.xml, robots.txt → SEO
 404.html                → not-found page
 .nojekyll               → GitHub ko batata hai ke Jekyll na chalaye
 ```
@@ -33,6 +37,31 @@ assets/site.js          → theme toggle aur projects rendering
 
 `repo` aur `demo` dono optional hain. Har page par 6 projects dikhte hain —
 ye number `assets/site.js` mein `PER_PAGE` se badla ja sakta hai.
+
+**Zaroori:** edit karne ke baad ye command chalayein —
+
+```bash
+node build.js
+```
+
+Ye projects ko HTML mein pre-render karta hai (taake Google unhe padh sake, sirf
+JavaScript par depend na ho) aur `sitemap.xml` update karta hai. Iske baad commit + push.
+
+## SEO
+
+Site par pehle se lagaya gaya hai:
+
+- Har page par unique `<title>`, meta description, canonical URL
+- Open Graph + Twitter card (share karne par `assets/og.png` dikhta hai)
+- JSON-LD structured data — home par `Person`/`ProfilePage`, projects par `ItemList`,
+  experience par `Person` + `Occupation`, dono par `BreadcrumbList`
+- `sitemap.xml` + `robots.txt`
+- Projects cards HTML mein pre-rendered (JS off ho tab bhi crawl hote hain)
+- Local images (koi external request nahi) — page tez load hota hai
+
+**Push ke baad ek dafa:** [Google Search Console](https://search.google.com/search-console)
+mein `https://its-alikhokher.github.io/` add karein aur sitemap submit karein:
+`https://its-alikhokher.github.io/sitemap.xml`
 
 ## Local par dekhna
 

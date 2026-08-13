@@ -4,6 +4,14 @@
  */
 window.PROJECTS = [
   {
+    title: "Bookfyd — Online Tutoring Platform",
+    date: "2026",
+    description:
+      "A tutoring marketplace connecting students in Lahore and the Gulf with verified tutors for O/A Level, IELTS, subject-wise learning, spoken English and creative writing. React frontend on a custom Frappe backend, deployed behind nginx on Ubuntu.",
+    tags: ["Frappe", "React", "Python", "Nginx"],
+    demo: "https://bookfyd.com/"
+  },
+  {
     title: "CMS — Clinic Management System (Gainhis)",
     date: "Feb 2025 – Nov 2025",
     description:

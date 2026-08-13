@@ -233,6 +233,12 @@ h2 {
 }
 .job .meta .where { color: var(--text); }
 .job .meta .date { font-family: var(--mono); font-size: 0.76rem; }
+.job .role-note {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-style: italic;
+}
 .job ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.93rem; }
 .job ul li { margin-bottom: 4px; }
 
