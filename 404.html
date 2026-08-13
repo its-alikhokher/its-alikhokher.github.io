@@ -10,34 +10,43 @@
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<div class="wrap">
 
-  <header class="site-head">
-    <img class="avatar" src="/assets/avatar.png" alt="Ali Raza" width="46" height="46">
-    <div class="brand">
-      <strong><a href="/">Ali Raza</a></strong>
-      <span>Frappe &amp; ERPNext Developer</span>
+<header class="site-head">
+  <div class="wrap">
+    <div class="avatar-flip" tabindex="0" aria-label="Ali Raza">
+      <div class="faces">
+        <img class="front" src="/assets/avatar.png" alt="Ali Raza" width="210" height="210">
+        <img class="back" src="/assets/monogram.png" alt="" width="210" height="210" loading="lazy">
+      </div>
     </div>
+    <p class="site-name"><a href="/">Ali Raza</a></p>
+    <p class="site-role">Frappe &amp; ERPNext Developer · Islamabad, PK</p>
     <nav class="site-nav">
-      <a href="/">Hi</a>
-      <a href="/projects/">Projects</a>
-      <a href="/experience/">Experience</a>
-      <button id="theme-toggle" type="button" aria-label="Toggle theme"></button>
+      <ul>
+        <li><a href="/">Hi</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/experience/">Experience</a></li>
+        <li><button id="theme-toggle" type="button" aria-label="Toggle theme"></button></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
+<main>
+  <div class="wrap">
+
     <p class="tagline">404</p>
     <h1>Page not found</h1>
     <p class="lede">That link may be outdated. Try <a href="/">Home</a>, <a href="/projects/">Projects</a> or <a href="/experience/">Experience</a>.</p>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    <span>© <span id="year">2026</span> Ali Raza · Islamabad, Pakistan</span>
-    <span><a href="https://github.com/its-alikhokher" rel="noopener">github.com/its-alikhokher</a></span>
-  </footer>
-
-</div>
+<footer>
+  <div class="wrap">
+    <span><span id="year">2026</span> — Ali Raza · Islamabad, Pakistan</span>
+    <span><a href="https://github.com/its-alikhokher" rel="me noopener">github.com/its-alikhokher</a></span>
+  </div>
+</footer>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <script src="/assets/site.js"></script>
 </body>
