@@ -105,6 +105,12 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--line);
   backface-visibility: hidden;
 }
+/* octocat transparent hai — uske peeche halka circle taake badge jaisa lage */
+.avatar-flip .front {
+  background: var(--accent-soft);
+  object-fit: contain;
+  padding: 6px;
+}
 .avatar-flip .back { transform: rotateY(180deg); }
 
 .site-name {
