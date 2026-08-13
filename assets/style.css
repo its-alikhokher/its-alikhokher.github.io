@@ -103,17 +103,27 @@ nav.site-nav a:hover { background: var(--bg-soft); color: var(--text); text-deco
 nav.site-nav a.active { color: var(--text); background: var(--accent-soft); }
 
 #theme-toggle {
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line);
   background: var(--bg-soft);
   color: var(--muted);
   border-radius: 8px;
   width: 32px;
   height: 32px;
+  padding: 0;
   cursor: pointer;
-  font-size: 0.9rem;
-  line-height: 1;
 }
-#theme-toggle:hover { color: var(--text); }
+#theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+#theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* ---------- content ---------- */
 main { padding-bottom: 40px; }

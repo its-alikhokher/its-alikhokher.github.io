@@ -4,23 +4,41 @@
  */
 (function () {
   // ---------- theme ----------
+  var SUN =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/>' +
+    '<path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>';
+  var MOON =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.3A8.2 8.2 0 0 1 9.7 4a8.5 8.5 0 1 0 10.3 10.3z"/></svg>';
+
   var stored = null;
   try { stored = localStorage.getItem("theme"); } catch (e) {}
   if (stored === "dark" || stored === "light") {
     document.documentElement.setAttribute("data-theme", stored);
   }
 
+  function isDark() {
+    var set = document.documentElement.getAttribute("data-theme");
+    if (set) return set === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function paintToggle() {
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    var dark = isDark();
+    btn.innerHTML = dark ? SUN : MOON;
+    btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    btn.setAttribute("title", dark ? "Light mode" : "Dark mode");
+  }
+  paintToggle();
+
   document.addEventListener("click", function (e) {
     var btn = e.target.closest && e.target.closest("#theme-toggle");
     if (!btn) return;
-    var isDark =
-      document.documentElement.getAttribute("data-theme") === "dark" ||
-      (!document.documentElement.getAttribute("data-theme") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    var next = isDark ? "light" : "dark";
+    var next = isDark() ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try { localStorage.setItem("theme", next); } catch (err) {}
-    btn.textContent = next === "dark" ? "☀" : "☾";
+    paintToggle();
   });
 
   // ---------- projects ----------
