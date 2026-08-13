@@ -12,8 +12,8 @@ experience/index.html   → work history + education (CV se)
 assets/projects.js      → PROJECTS array — yahan projects edit karein
 assets/style.css        → styling + light/dark theme tokens
 assets/site.js          → theme toggle aur pagination
-assets/og.png           → social share image (1200x630)
-assets/avatar.png       → profile photo
+assets/ali-raza-*.jpg   → profile photo (SEO filename)
+assets/ali-raza-*-og.png → social share image (1200x630)
 build.js                → projects ko HTML mein pre-render + sitemap banata hai
 sitemap.xml, robots.txt → SEO
 404.html                → not-found page
@@ -47,12 +47,20 @@ node build.js
 Ye projects ko HTML mein pre-render karta hai (taake Google unhe padh sake, sirf
 JavaScript par depend na ho) aur `sitemap.xml` update karta hai. Iske baad commit + push.
 
+## Profile photo badalna
+
+```bash
+python3 tools/update-photo.py /path/to/nayi-photo.jpg
+```
+
+Ye avatar, apple-touch-icon aur OG share image — teenon regenerate kar deta hai.
+
 ## SEO
 
 Site par pehle se lagaya gaya hai:
 
 - Har page par unique `<title>`, meta description, canonical URL
-- Open Graph + Twitter card (share karne par `assets/og.png` dikhta hai)
+- Open Graph + Twitter card (share karne par `assets/ali-raza-erpnext-developer-og.png` dikhta hai)
 - JSON-LD structured data — home par `Person`/`ProfilePage`, projects par `ItemList`,
   experience par `Person` + `Occupation`, dono par `BreadcrumbList`
 - `sitemap.xml` + `robots.txt`
