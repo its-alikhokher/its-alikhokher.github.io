@@ -4,24 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — ERPNext &amp; Frappe Work by Ali Raza</title>
-<meta name="description" content="ERPNext and Frappe projects by Ali Raza: clinic management for a Saudi healthcare provider, a municipal ERP in Guatemala, HRMS with biometric integration, plus open-source Frappe apps.">
+<meta name="description" content="ERPNext projects by Ali Raza: FedEx and Shopify integrations, a B2B ordering portal, a Saudi clinic system with NPHIES and Moyasar, a municipal ERP and HRMS.">
 <meta name="author" content="Ali Raza">
-<meta name="keywords" content="ERPNext projects, Frappe projects, ERPNext case studies, clinic management system ERPNext, municipal ERP, ERPNext HRMS project, ERPNext POS, Frappe theme, ERPNext portfolio, ERPNext developer portfolio, open source Frappe apps, ERPNext Saudi Arabia, ERPNext Guatemala, Ali Raza projects">
+<meta name="keywords" content="ERPNext projects, Frappe projects, ERPNext case studies, clinic management system ERPNext, municipal ERP, ERPNext HRMS project, ERPNext POS, Frappe theme, ERPNext portfolio, ERPNext developer portfolio, open source Frappe apps, ERPNext Saudi Arabia, ERPNext Guatemala, ERPNext FedEx integration, ERPNext Shopify connector, ERPNext B2B portal, NPHIES ERPNext, Moyasar ERPNext, Ali Raza projects">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#101114">
 <link rel="canonical" href="https://its-alikhokher.github.io/projects/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ali Raza">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://its-alikhokher.github.io/projects/">
 <meta property="og:title" content="Projects — ERPNext &amp; Frappe Work by Ali Raza">
-<meta property="og:description" content="ERP implementations for healthcare, government, manufacturing and HR — plus open-source Frappe apps.">
+<meta property="og:description" content="ERP implementations and integrations for e-commerce, logistics, healthcare, government and HR, plus open-source Frappe apps.">
 <meta property="og:image" content="https://its-alikhokher.github.io/assets/ali-raza-erpnext-developer-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects — ERPNext &amp; Frappe Work by Ali Raza">
-<meta name="twitter:description" content="ERP implementations for healthcare, government, manufacturing and HR — plus open-source Frappe apps.">
+<meta name="twitter:description" content="ERP implementations and integrations for e-commerce, logistics, healthcare, government and HR, plus open-source Frappe apps.">
 <meta name="twitter:image" content="https://its-alikhokher.github.io/assets/ali-raza-erpnext-developer-og.png">
 
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -44,11 +45,53 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Projects by Ali Raza",
-  "numberOfItems": 18,
+  "numberOfItems": 21,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "Shopify Multi-Store Connector for ERPNext",
+        "description": "A standalone Frappe app that connects any number of Shopify stores to ERPNext v16, each posting into its own company, warehouse, cost center and accounts. Webhooks turn Shopify orders into Sales Orders (items matched by SKU, Shopify's own prices, taxes and shipping), paid orders into Sales Invoices and Payment Entries, and submitted Delivery Notes into Shopify fulfilments with tracking. A scheduler pushes only changed stock levels to each Shopify location, products and variants are mapped to ERPNext Items, and every event is written to a sync log — duplicate webhooks never create duplicate documents.",
+        "keywords": "Frappe, ERPNext v16, Shopify API, Webhooks, Python",
+        "author": {
+          "@type": "Person",
+          "name": "Ali Raza"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "FedEx Shipping Integration for ERPNext v16",
+        "description": "Direct integration with FedEx's REST APIs — no aggregator or reseller in the middle. Live rate shopping on Sales Orders and Delivery Notes (including Saturday/Sunday delivery), the chosen rate added to the invoice as a shipping charge, multi-piece labels in PDF, PNG, ZPL or EPL, international customs with HS codes and FedEx-generated commercial invoices, address validation, and a scheduled tracking sync that moves each Shipment from Picked Up to Delivered and can email the customer. Shipping rules per customer or customer group pick the default service.",
+        "keywords": "Python, ERPNext v16, FedEx API, Logistics",
+        "author": {
+          "@type": "Person",
+          "name": "Ali Raza"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "B2B Wholesale Ordering Portal",
+        "description": "A React 19 + Vite ordering portal on Frappe for wholesale customers. Each customer sees only their own catalogue with customer-specific prices and tax templates, builds a cart and places orders that flow straight into ERPNext for review. Includes promotions and free-item schemes, shipping rules with live FedEx rates, online card payment, order tracking with downloadable commercial and proforma invoices, address management, and a UI translated into 9 languages including Arabic and Chinese.",
+        "keywords": "React, Vite, Frappe, ERPNext, i18n",
+        "author": {
+          "@type": "Person",
+          "name": "Ali Raza"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
       "item": {
         "@type": "CreativeWork",
         "name": "Bookfyd — Online Tutoring Platform",
@@ -63,12 +106,12 @@
     },
     {
       "@type": "ListItem",
-      "position": 2,
+      "position": 5,
       "item": {
         "@type": "CreativeWork",
         "name": "CMS — Clinic Management System (Gainhis)",
-        "description": "Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Billing and insurance claim cycles cut admin workload by ~40%.",
-        "keywords": "Frappe, ERPNext, Healthcare, Team Lead",
+        "description": "Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Integrated with NPHIES, Saudi Arabia's national health insurance platform, for eligibility checks, pre-authorization and claims, and with the Moyasar payment gateway for online patient payments (mada and cards). Billing and insurance claim cycles cut admin workload by ~40%.",
+        "keywords": "Frappe, ERPNext, Healthcare, NPHIES, Moyasar, Team Lead",
         "author": {
           "@type": "Person",
           "name": "Ali Raza"
@@ -78,7 +121,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 3,
+      "position": 6,
       "item": {
         "@type": "CreativeWork",
         "name": "SAM — Municipal Management System (Fraijanes, Guatemala)",
@@ -93,7 +136,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 4,
+      "position": 7,
       "item": {
         "@type": "CreativeWork",
         "name": "Safdar Hotel",
@@ -108,7 +151,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 5,
+      "position": 8,
       "item": {
         "@type": "CreativeWork",
         "name": "FlyRank ML",
@@ -123,7 +166,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 6,
+      "position": 9,
       "item": {
         "@type": "CreativeWork",
         "name": "Swift Theme",
@@ -138,7 +181,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 7,
+      "position": 10,
       "item": {
         "@type": "CreativeWork",
         "name": "Frappe / ERPNext v16 on Ubuntu 24.04",
@@ -153,7 +196,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 8,
+      "position": 11,
       "item": {
         "@type": "CreativeWork",
         "name": "Alkhidmat HR Platform",
@@ -167,7 +210,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 9,
+      "position": 12,
       "item": {
         "@type": "CreativeWork",
         "name": "Is it Alzheimer's or Dementia?",
@@ -182,7 +225,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 10,
+      "position": 13,
       "item": {
         "@type": "CreativeWork",
         "name": "Frappe Enhanced Calendar View",
@@ -197,11 +240,11 @@
     },
     {
       "@type": "ListItem",
-      "position": 11,
+      "position": 14,
       "item": {
         "@type": "CreativeWork",
         "name": "ZKT Integration",
-        "description": "Syncs employee check-ins from ZKTeco biometric devices straight into ERPNext HRMS, with cloud sync and geofenced validation.",
+        "description": "Pulls attendance punches from ZKTeco biometric devices (F22, K40 and other ZK-protocol devices) into Frappe HRMS v15/v16 as Employee Checkins — active employees only, safe to re-run without duplicates, multi-company device mapping, and every sync recorded in an Attendance Device Log.",
         "keywords": "Python, HRMS, Biometrics, Open source",
         "author": {
           "@type": "Person",
@@ -212,7 +255,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 12,
+      "position": 15,
       "item": {
         "@type": "CreativeWork",
         "name": "PostgreSQL Setup Scripts",
@@ -227,7 +270,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 13,
+      "position": 16,
       "item": {
         "@type": "CreativeWork",
         "name": "POS Awesome (Vue)",
@@ -242,7 +285,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 14,
+      "position": 17,
       "item": {
         "@type": "CreativeWork",
         "name": "Frappe Enhanced Grid View",
@@ -257,7 +300,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 15,
+      "position": 18,
       "item": {
         "@type": "CreativeWork",
         "name": "Mubtkir Business Solution",
@@ -272,7 +315,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 16,
+      "position": 19,
       "item": {
         "@type": "CreativeWork",
         "name": "Offerter",
@@ -287,7 +330,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 17,
+      "position": 20,
       "item": {
         "@type": "CreativeWork",
         "name": "Petty Cash",
@@ -302,7 +345,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 18,
+      "position": 21,
       "item": {
         "@type": "CreativeWork",
         "name": "ERP for a Spanish Client",
@@ -330,11 +373,12 @@
       </div>
     </div>
     <p class="site-name"><a href="../">Ali Raza</a></p>
-    <p class="site-role">Frappe|Erpnext Techno-Functional & Developer · Islamabad, PK</p>
+    <p class="site-role">Frappe | ERPNext Techno-Functional Consultant &amp; Developer · Islamabad, PK</p>
     <nav class="site-nav">
       <ul>
         <li><a href="../">Hi</a></li>
         <li><a href="./" class="active" aria-current="page">Projects</a></li>
+        <li><a href="../integrations/">Integrations</a></li>
         <li><a href="../experience/">Experience</a></li>
         <li><button id="theme-toggle" type="button" aria-label="Toggle theme"></button></li>
       </ul>
@@ -348,12 +392,32 @@
     <p class="tagline">Projects</p>
     <h1>ERPNext &amp; Frappe projects I've built</h1>
     <p class="lede">
-      Client ERP implementations — healthcare, government, manufacturing and HR — plus
-      open-source Frappe apps and a few side experiments.
+      Client ERP implementations and integrations — e-commerce, logistics, healthcare,
+      government and HR — plus open-source Frappe apps and a few side experiments.
+      For FedEx, Shopify, NPHIES, Moyasar and payment gateways, see
+      <a href="../integrations/">integrations</a>.
     </p>
 
     <div class="card-list" id="project-list">
       <!-- projects:start -->
+        <article class="card">
+          <div class="card-top"><h3>Shopify Multi-Store Connector for ERPNext</h3><span class="date">Nov 2026</span></div>
+          <p>A standalone Frappe app that connects any number of Shopify stores to ERPNext v16, each posting into its own company, warehouse, cost center and accounts. Webhooks turn Shopify orders into Sales Orders (items matched by SKU, Shopify's own prices, taxes and shipping), paid orders into Sales Invoices and Payment Entries, and submitted Delivery Notes into Shopify fulfilments with tracking. A scheduler pushes only changed stock levels to each Shopify location, products and variants are mapped to ERPNext Items, and every event is written to a sync log — duplicate webhooks never create duplicate documents.</p>
+          <ul class="stack"><li>Frappe</li><li>ERPNext v16</li><li>Shopify API</li><li>Webhooks</li><li>Python</li></ul>
+          
+        </article>
+        <article class="card">
+          <div class="card-top"><h3>FedEx Shipping Integration for ERPNext v16</h3><span class="date">Sep 2026 – Nov 2026</span></div>
+          <p>Direct integration with FedEx's REST APIs — no aggregator or reseller in the middle. Live rate shopping on Sales Orders and Delivery Notes (including Saturday/Sunday delivery), the chosen rate added to the invoice as a shipping charge, multi-piece labels in PDF, PNG, ZPL or EPL, international customs with HS codes and FedEx-generated commercial invoices, address validation, and a scheduled tracking sync that moves each Shipment from Picked Up to Delivered and can email the customer. Shipping rules per customer or customer group pick the default service.</p>
+          <ul class="stack"><li>Python</li><li>ERPNext v16</li><li>FedEx API</li><li>Logistics</li></ul>
+          
+        </article>
+        <article class="card">
+          <div class="card-top"><h3>B2B Wholesale Ordering Portal</h3><span class="date">Sep 2026 – Nov 2026</span></div>
+          <p>A React 19 + Vite ordering portal on Frappe for wholesale customers. Each customer sees only their own catalogue with customer-specific prices and tax templates, builds a cart and places orders that flow straight into ERPNext for review. Includes promotions and free-item schemes, shipping rules with live FedEx rates, online card payment, order tracking with downloadable commercial and proforma invoices, address management, and a UI translated into 9 languages including Arabic and Chinese.</p>
+          <ul class="stack"><li>React</li><li>Vite</li><li>Frappe</li><li>ERPNext</li><li>i18n</li></ul>
+          
+        </article>
         <article class="card">
           <div class="card-top"><h3><a href="https://bookfyd.com/" rel="noopener">Bookfyd — Online Tutoring Platform</a></h3><span class="date">2026</span></div>
           <p>A tutoring marketplace connecting students in Lahore and the Gulf with verified tutors for O/A Level, IELTS, subject-wise learning, spoken English and creative writing. React frontend on a custom Frappe backend, deployed behind nginx on Ubuntu.</p>
@@ -362,8 +426,8 @@
         </article>
         <article class="card">
           <div class="card-top"><h3><a href="https://cms.gainhis.com" rel="noopener">CMS — Clinic Management System (Gainhis)</a></h3><span class="date">Feb 2025 – Nov 2025</span></div>
-          <p>Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Billing and insurance claim cycles cut admin workload by ~40%.</p>
-          <ul class="stack"><li>Frappe</li><li>ERPNext</li><li>Healthcare</li><li>Team Lead</li></ul>
+          <p>Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Integrated with NPHIES, Saudi Arabia's national health insurance platform, for eligibility checks, pre-authorization and claims, and with the Moyasar payment gateway for online patient payments (mada and cards). Billing and insurance claim cycles cut admin workload by ~40%.</p>
+          <ul class="stack"><li>Frappe</li><li>ERPNext</li><li>Healthcare</li><li>NPHIES</li><li>Moyasar</li><li>Team Lead</li></ul>
           <div class="card-links"><a href="https://cms.gainhis.com" rel="noopener">Live demo →</a></div>
         </article>
         <article class="card">
@@ -397,7 +461,7 @@
           <div class="card-links"><a href="https://github.com/its-alikhokher/Frappe-ERPNext-Version-16--in-Ubuntu-24.04-LTS" rel="noopener">Source →</a></div>
         </article>
         <article class="card">
-          <div class="card-top"><h3>Alkhidmat HR Platform</h3><span class="date">Jan 2025 – Jun 2026</span></div>
+          <div class="card-top"><h3>Alkhidmat HR Platform</h3><span class="date">Jan 2026 – Jun 2026</span></div>
           <p>Integrated HR platform on Frappe/ERPNext HRMS with 60+ custom DocTypes: a multi-level approval workflow engine with dynamic approver resolution, ZKTeco biometric integration with GPS geofenced check-in, an automated payroll deduction engine, a React employee self-service portal on 30+ REST APIs, and a Vue/Ionic PWA with Firebase push notifications.</p>
           <ul class="stack"><li>Frappe</li><li>HRMS</li><li>React</li><li>Vue / Ionic</li></ul>
           
@@ -416,7 +480,7 @@
         </article>
         <article class="card">
           <div class="card-top"><h3><a href="https://github.com/its-alikhokher/zkt_integration" rel="noopener">ZKT Integration</a></h3><span class="date">Feb 2026</span></div>
-          <p>Syncs employee check-ins from ZKTeco biometric devices straight into ERPNext HRMS, with cloud sync and geofenced validation.</p>
+          <p>Pulls attendance punches from ZKTeco biometric devices (F22, K40 and other ZK-protocol devices) into Frappe HRMS v15/v16 as Employee Checkins — active employees only, safe to re-run without duplicates, multi-company device mapping, and every sync recorded in an Attendance Device Log.</p>
           <ul class="stack"><li>Python</li><li>HRMS</li><li>Biometrics</li><li>Open source</li></ul>
           <div class="card-links"><a href="https://github.com/its-alikhokher/zkt_integration" rel="noopener">Source →</a></div>
         </article>

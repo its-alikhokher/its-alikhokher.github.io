@@ -10,7 +10,7 @@ const path = require("path");
 
 const ROOT = __dirname;
 const SITE = "https://its-alikhokher.github.io";
-const PAGES = ["/", "/projects/", "/experience/"];
+const PAGES = ["/", "/projects/", "/integrations/", "/experience/"];
 
 // ---- projects.js load karein (browser ke bina) ----
 const src = fs.readFileSync(path.join(ROOT, "assets/projects.js"), "utf8");

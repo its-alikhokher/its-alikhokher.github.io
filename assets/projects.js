@@ -4,6 +4,27 @@
  */
 window.PROJECTS = [
   {
+    title: "Shopify Multi-Store Connector for ERPNext",
+    date: "Nov 2026",
+    description:
+      "A standalone Frappe app that connects any number of Shopify stores to ERPNext v16, each posting into its own company, warehouse, cost center and accounts. Webhooks turn Shopify orders into Sales Orders (items matched by SKU, Shopify's own prices, taxes and shipping), paid orders into Sales Invoices and Payment Entries, and submitted Delivery Notes into Shopify fulfilments with tracking. A scheduler pushes only changed stock levels to each Shopify location, products and variants are mapped to ERPNext Items, and every event is written to a sync log — duplicate webhooks never create duplicate documents.",
+    tags: ["Frappe", "ERPNext v16", "Shopify API", "Webhooks", "Python"]
+  },
+  {
+    title: "FedEx Shipping Integration for ERPNext v16",
+    date: "Sep 2026 – Nov 2026",
+    description:
+      "Direct integration with FedEx's REST APIs — no aggregator or reseller in the middle. Live rate shopping on Sales Orders and Delivery Notes (including Saturday/Sunday delivery), the chosen rate added to the invoice as a shipping charge, multi-piece labels in PDF, PNG, ZPL or EPL, international customs with HS codes and FedEx-generated commercial invoices, address validation, and a scheduled tracking sync that moves each Shipment from Picked Up to Delivered and can email the customer. Shipping rules per customer or customer group pick the default service.",
+    tags: ["Python", "ERPNext v16", "FedEx API", "Logistics"]
+  },
+  {
+    title: "B2B Wholesale Ordering Portal",
+    date: "Sep 2026 – Nov 2026",
+    description:
+      "A React 19 + Vite ordering portal on Frappe for wholesale customers. Each customer sees only their own catalogue with customer-specific prices and tax templates, builds a cart and places orders that flow straight into ERPNext for review. Includes promotions and free-item schemes, shipping rules with live FedEx rates, online card payment, order tracking with downloadable commercial and proforma invoices, address management, and a UI translated into 9 languages including Arabic and Chinese.",
+    tags: ["React", "Vite", "Frappe", "ERPNext", "i18n"]
+  },
+  {
     title: "Bookfyd — Online Tutoring Platform",
     date: "2026",
     description:
@@ -15,8 +36,8 @@ window.PROJECTS = [
     title: "CMS — Clinic Management System (Gainhis)",
     date: "Feb 2025 – Nov 2025",
     description:
-      "Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Billing and insurance claim cycles cut admin workload by ~40%.",
-    tags: ["Frappe", "ERPNext", "Healthcare", "Team Lead"],
+      "Full clinic management system for a Saudi healthcare provider on Frappe/ERPNext — patient registration, appointments, EHR with role-based access, billing and inventory. Pharmacy and diagnostics connected through custom APIs, bilingual Arabic/English UI, and real-time dashboards for patient flow, revenue and staff performance. Integrated with NPHIES, Saudi Arabia's national health insurance platform, for eligibility checks, pre-authorization and claims, and with the Moyasar payment gateway for online patient payments (mada and cards). Billing and insurance claim cycles cut admin workload by ~40%.",
+    tags: ["Frappe", "ERPNext", "Healthcare", "NPHIES", "Moyasar", "Team Lead"],
     demo: "https://cms.gainhis.com"
   },
   {
@@ -62,7 +83,7 @@ window.PROJECTS = [
   },
   {
     title: "Alkhidmat HR Platform",
-    date: "Jan 2025 – Jun 2026",
+    date: "Jan 2026 – Jun 2026",
     description:
       "Integrated HR platform on Frappe/ERPNext HRMS with 60+ custom DocTypes: a multi-level approval workflow engine with dynamic approver resolution, ZKTeco biometric integration with GPS geofenced check-in, an automated payroll deduction engine, a React employee self-service portal on 30+ REST APIs, and a Vue/Ionic PWA with Firebase push notifications.",
     tags: ["Frappe", "HRMS", "React", "Vue / Ionic"]
@@ -87,7 +108,7 @@ window.PROJECTS = [
     title: "ZKT Integration",
     date: "Feb 2026",
     description:
-      "Syncs employee check-ins from ZKTeco biometric devices straight into ERPNext HRMS, with cloud sync and geofenced validation.",
+      "Pulls attendance punches from ZKTeco biometric devices (F22, K40 and other ZK-protocol devices) into Frappe HRMS v15/v16 as Employee Checkins — active employees only, safe to re-run without duplicates, multi-company device mapping, and every sync recorded in an Attendance Device Log.",
     tags: ["Python", "HRMS", "Biometrics", "Open source"],
     repo: "https://github.com/its-alikhokher/zkt_integration"
   },
